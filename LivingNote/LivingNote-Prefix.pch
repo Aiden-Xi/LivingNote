@@ -1,0 +1,14 @@
+//
+//  LivingNote-Prefix.pch
+//  LivingNote
+//
+//  Created by xxy on 15/10/16.
+//  Copyright © 2015年 AtYun. All rights reserved.
+//
+
+#ifndef LivingNote_Prefix_pch
+#define LivingNote_Prefix_pch
+
+#import "System.h"
+
+#endif
