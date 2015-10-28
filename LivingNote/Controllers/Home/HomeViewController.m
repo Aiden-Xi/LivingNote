@@ -15,6 +15,9 @@
 
 #define kYunButtonViewTag 10
 #define kBgViewTag 100
+#define kBottomButtonTag 1000
+
+#define kBgViewHeight (kScreenWidth > 375 ? 232 * 1.293 : (kScreenWidth > 320 ? 232 * 1.17 : 232))
 
 @interface HomeViewController () <SDCycleScrollViewDelegate, YunSearchTextFieldDelegate, UITextFieldDelegate, UIScrollViewDelegate, YunButtonViewDelegate>
 
@@ -72,7 +75,7 @@
     for (int i = 0; i < 4; i++) {
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         
-        [dict setObject:@"美丽说" forKey:@"title"];
+        [dict setObject:@"MEDICAL" forKey:@"title"];
         [dict setObject:@"云店家出品" forKey:@"desc"];
         [dict setObject:@"http://7xnc62.com1.z0.glb.clouddn.com/uploads%2Frecommend%2Flarge_poster%2F3209%2F900b2f8769f9311a348efb77fb723257.jpg" forKey:@"image_url"];
         
@@ -234,8 +237,10 @@
     }
     
     // 添加后面的内容
-    CGFloat bgViewHeight = 200;
+    CGFloat bgViewHeight = kBgViewHeight;
+    
     _height = CGRectGetMaxY(_sdCycleScrollView.frame) + 2 * height + kDoubleSpace;
+    
     for (int i = 0; i < _testArray.count; i++) {
         NSDictionary *dict = _testArray[i];
         
@@ -268,7 +273,7 @@
         YunLabel *titleLabel = [[YunLabel alloc] init];
         titleLabel.text = [NSString stringWithFormat:@"医学文库文章: %@", dict[@"title"]];
         titleLabel.font = kNormalFont;
-        titleLabel.textColor = COLOR(127, 127, 127, 1);
+        titleLabel.textColor = kBlackColor;
         
         [bgView addSubview:titleLabel];
         
@@ -279,6 +284,105 @@
             make.height.mas_equalTo(2 * kDoubleSpace);
         }];
         
+        // 副标签
+        YunLabel *descLabel = [[YunLabel alloc] init];
+        descLabel.text = [NSString stringWithFormat:@"%@", dict[@"desc"]];
+        descLabel.textColor = COLOR(127, 127, 127, 1);
+        descLabel.font = kMidFont;
+        
+        [bgView addSubview:descLabel];
+        
+        [descLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(bgView).offset(1.5 * kDoubleSpace);
+            make.right.equalTo(bgView).offset(0);
+            make.top.equalTo(bgView).offset(3.5 * kDoubleSpace);
+            make.height.mas_equalTo(2 * kDoubleSpace);
+            
+        }];
+        
+        // 分割线
+        YunLineView *lineView = [[YunLineView alloc] init];
+        
+        [bgView addSubview:lineView];
+        
+        [lineView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(bgView).offset(0);
+            make.right.equalTo(bgView).offset(0);
+            make.top.equalTo(bgView).offset(6 * kDoubleSpace);
+            make.height.mas_equalTo(kLineHeight);
+        }];
+        
+        // imageView
+        UIImageView *imageView = [[UIImageView alloc] init];
+        imageView.backgroundColor = kRedColor;
+        imageView.contentMode = UIViewContentModeCenter;
+        
+        [bgView addSubview:imageView];
+        
+        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(bgView).offset(0);
+            make.right.equalTo(bgView).offset(0);
+            make.top.equalTo(bgView).offset(6 * kDoubleSpace + kLineHeight);
+            make.bottom.equalTo(bgView).offset( -5 * kDoubleSpace);
+        }];
+        
+        __weak UIImageView *_imageView = imageView;
+        
+        [imageView setImageWithURLRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:kNullToString([dict safeObjectForKey:@"image_url"])]]
+                         placeholderImage:nil
+                                  success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                      _imageView.contentMode = UIViewContentModeScaleToFill;
+                                      _imageView.image = image;
+                                  }
+                                  failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+                                      [_imageView setImageWithURL:[NSURL URLWithString:kNullToString([dict safeObjectForKey:@"image_url"])] placeholderImage:[UIImage imageNamed:@"default_history"]];
+                                      _imageView.contentMode = UIViewContentModeScaleToFill;
+                                  }];
+        
+        // 分割线
+        YunLineView *bottomLineView = [[YunLineView alloc] init];
+        
+        [bgView addSubview:bottomLineView];
+        
+        [bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(bgView).offset(0);
+            make.right.equalTo(bgView).offset(0);
+            make.bottom.equalTo(bgView).offset(-4.8 * kDoubleSpace);
+            make.height.mas_equalTo(1);
+        }];
+        
+        // UIButton
+        YunButton *button = [[YunButton alloc] init];
+        [button setTitle:@"查看详情" forState:UIControlStateNormal];
+        button.titleLabel.font = kBigFont;
+        button.backgroundColor = kClearColor;
+        [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
+        button.tag = ( i + 1) * kBottomButtonTag;
+        [button addTarget:self action:@selector(enterDetail:) forControlEvents:UIControlEventTouchUpInside];
+        button.titleLabel.textAlignment = NSTextAlignmentCenter;
+        button.titleEdgeInsets = UIEdgeInsetsMake(0, 200, 0, 0);
+        
+        [bgView addSubview:button];
+        
+        [button mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(bgView).offset(0);
+            make.right.equalTo(bgView).offset(0);
+            make.top.mas_equalTo(imageView.mas_bottom).offset(0);
+            make.bottom.equalTo(bgView).offset(0);
+        }];
+        
+        // 箭头
+        UIImageView *arrowView = [[UIImageView alloc] init];
+        arrowView.image = [UIImage imageNamed:@"back_button"];
+        arrowView.transform = CGAffineTransformMakeRotation(M_PI);
+        
+        [bgView addSubview:arrowView];
+        
+        [arrowView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(button.mas_top).offset(1.3 * kDoubleSpace);
+            make.width.and.height.mas_equalTo(25);
+            make.right.equalTo(bgView).offset(-1 * kDoubleSpace);
+        }];
     }
     
     _scrollView.contentSize = CGSizeMake(kScreenWidth, kScreenHeight * 4);
@@ -316,6 +420,10 @@
 
 - (void)allCovButtonClick:(YunButton *)sender {
     XXYLog(@"------allCovButton--%ld", sender.tag);
+}
+
+- (void)enterDetail:(YunButton *)sender {
+    XXYLog(@"-----enterDetail--%ld", sender.tag);
 }
 
 #pragma markk - SearchView Delegate - 
