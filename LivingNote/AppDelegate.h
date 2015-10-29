@@ -25,5 +25,8 @@
 /// 判断用户是否登陆
 @property (nonatomic, assign) BOOL isLogin;
 
+/// 用户
+@property (nonatomic, strong) UserModel *user;
+
 @end
 

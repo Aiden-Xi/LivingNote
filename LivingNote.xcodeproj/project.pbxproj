@@ -37,6 +37,9 @@
 		95F12F331BD629B2008A4ABC /* YunButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F12F321BD629B2008A4ABC /* YunButton.m */; settings = {ASSET_TAGS = (); }; };
 		95F12F361BD62D8A008A4ABC /* YunLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F12F351BD62D8A008A4ABC /* YunLabel.m */; settings = {ASSET_TAGS = (); }; };
 		95F12F391BD63629008A4ABC /* YunLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 95F12F381BD63629008A4ABC /* YunLineView.m */; settings = {ASSET_TAGS = (); }; };
+		F413250A1BE25BFC00FE7D8F /* DocterMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F41325091BE25BFC00FE7D8F /* DocterMineViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F413250D1BE25C1B00FE7D8F /* SickMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F413250C1BE25C1B00FE7D8F /* SickMineViewController.m */; settings = {ASSET_TAGS = (); }; };
+		F41325171BE266A500FE7D8F /* UIView+MGBadgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = F41325141BE266A500FE7D8F /* UIView+MGBadgeView.m */; settings = {ASSET_TAGS = (); }; };
 		F435049F1BD4ECCB001DEA22 /* guide_five_ipad@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F435034C1BD4ECCB001DEA22 /* guide_five_ipad@2x.png */; settings = {ASSET_TAGS = (); }; };
 		F43504A01BD4ECCB001DEA22 /* guide_five_iphone4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F435034D1BD4ECCB001DEA22 /* guide_five_iphone4@2x.png */; settings = {ASSET_TAGS = (); }; };
 		F43504A11BD4ECCB001DEA22 /* guide_five_iphone6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F435034E1BD4ECCB001DEA22 /* guide_five_iphone6@2x.png */; settings = {ASSET_TAGS = (); }; };
@@ -401,7 +404,6 @@
 		F4C837491BD535060079E427 /* GuideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C8373A1BD535060079E427 /* GuideViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F4C8374C1BD535060079E427 /* CartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C837411BD535060079E427 /* CartViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F4C8374D1BD535060079E427 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C837441BD535060079E427 /* HomeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		F4C8374E1BD535060079E427 /* MyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C837471BD535060079E427 /* MyViewController.m */; settings = {ASSET_TAGS = (); }; };
 		F4C837591BD535B50079E427 /* YunShareButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C837531BD535B50079E427 /* YunShareButton.m */; settings = {ASSET_TAGS = (); }; };
 		F4C8375A1BD535B50079E427 /* YunShareView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C837551BD535B50079E427 /* YunShareView.m */; settings = {ASSET_TAGS = (); }; };
 		F4C8375D1BD54D720079E427 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C8375C1BD54D720079E427 /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -488,6 +490,12 @@
 		95F12F371BD63629008A4ABC /* YunLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunLineView.h; sourceTree = "<group>"; };
 		95F12F381BD63629008A4ABC /* YunLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunLineView.m; sourceTree = "<group>"; };
 		AACC5F8FD701D33F01A0464A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F41325081BE25BFC00FE7D8F /* DocterMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DocterMineViewController.h; sourceTree = "<group>"; };
+		F41325091BE25BFC00FE7D8F /* DocterMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DocterMineViewController.m; sourceTree = "<group>"; };
+		F413250B1BE25C1B00FE7D8F /* SickMineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SickMineViewController.h; sourceTree = "<group>"; };
+		F413250C1BE25C1B00FE7D8F /* SickMineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SickMineViewController.m; sourceTree = "<group>"; };
+		F41325131BE266A500FE7D8F /* UIView+MGBadgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MGBadgeView.h"; sourceTree = "<group>"; };
+		F41325141BE266A500FE7D8F /* UIView+MGBadgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MGBadgeView.m"; sourceTree = "<group>"; };
 		F435034C1BD4ECCB001DEA22 /* guide_five_ipad@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide_five_ipad@2x.png"; sourceTree = "<group>"; };
 		F435034D1BD4ECCB001DEA22 /* guide_five_iphone4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide_five_iphone4@2x.png"; sourceTree = "<group>"; };
 		F435034E1BD4ECCB001DEA22 /* guide_five_iphone6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "guide_five_iphone6@2x.png"; sourceTree = "<group>"; };
@@ -876,8 +884,6 @@
 		F4C837411BD535060079E427 /* CartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartViewController.m; sourceTree = "<group>"; };
 		F4C837431BD535060079E427 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		F4C837441BD535060079E427 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		F4C837461BD535060079E427 /* MyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyViewController.h; sourceTree = "<group>"; };
-		F4C837471BD535060079E427 /* MyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyViewController.m; sourceTree = "<group>"; };
 		F4C837521BD535B50079E427 /* YunShareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunShareButton.h; sourceTree = "<group>"; };
 		F4C837531BD535B50079E427 /* YunShareButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunShareButton.m; sourceTree = "<group>"; };
 		F4C837541BD535B50079E427 /* YunShareView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunShareView.h; sourceTree = "<group>"; };
@@ -1090,6 +1096,8 @@
 		959E7EA41BD0DCB50000AF8D /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				F41325131BE266A500FE7D8F /* UIView+MGBadgeView.h */,
+				F41325141BE266A500FE7D8F /* UIView+MGBadgeView.m */,
 				F4C837111BD529A70079E427 /* MBProgressHUD+Extend.h */,
 				F4C837121BD529A70079E427 /* MBProgressHUD+Extend.m */,
 				F4C8371B1BD52AA30079E427 /* SDCycleScrollView */,
@@ -1693,8 +1701,10 @@
 		F4C837451BD535060079E427 /* MineCenter */ = {
 			isa = PBXGroup;
 			children = (
-				F4C837461BD535060079E427 /* MyViewController.h */,
-				F4C837471BD535060079E427 /* MyViewController.m */,
+				F41325081BE25BFC00FE7D8F /* DocterMineViewController.h */,
+				F41325091BE25BFC00FE7D8F /* DocterMineViewController.m */,
+				F413250B1BE25C1B00FE7D8F /* SickMineViewController.h */,
+				F413250C1BE25C1B00FE7D8F /* SickMineViewController.m */,
 			);
 			name = MineCenter;
 			path = Mine;
@@ -2272,6 +2282,7 @@
 				F4C837311BD52AA30079E427 /* TAPageControl.m in Sources */,
 				F4C837591BD535B50079E427 /* YunShareButton.m in Sources */,
 				F4C837191BD529A70079E427 /* TAAnimatedRealDotView.m in Sources */,
+				F413250A1BE25BFC00FE7D8F /* DocterMineViewController.m in Sources */,
 				959E7E711BD0DC020000AF8D /* AppDelegate.m in Sources */,
 				950060361BD0F04600489E3C /* NSDictionary+safeObjectForKey.m in Sources */,
 				95F12F331BD629B2008A4ABC /* YunButton.m in Sources */,
@@ -2281,6 +2292,7 @@
 				F489B5CA1BDFA44700923AD6 /* DoctorCertifyViewController.m in Sources */,
 				F4C8374C1BD535060079E427 /* CartViewController.m in Sources */,
 				F452341C1BDE631D00BE2717 /* LoginViewController.m in Sources */,
+				F41325171BE266A500FE7D8F /* UIView+MGBadgeView.m in Sources */,
 				954B47291BD61261001E4205 /* UserModel.m in Sources */,
 				952269771BDDED7A0040D769 /* KKNavigationController.m in Sources */,
 				950060381BD0F04600489E3C /* UIButton+TJButtom.m in Sources */,
@@ -2289,6 +2301,7 @@
 				959E7E7A1BD0DC020000AF8D /* LivingNote.xcdatamodeld in Sources */,
 				F4C8375D1BD54D720079E427 /* BaseViewController.m in Sources */,
 				F4C837181BD529A70079E427 /* MBProgressHUD+Extend.m in Sources */,
+				F413250D1BE25C1B00FE7D8F /* SickMineViewController.m in Sources */,
 				F4C8375A1BD535B50079E427 /* YunShareView.m in Sources */,
 				95F12F301BD628B8008A4ABC /* YunNavigationBarView.m in Sources */,
 				F4C837491BD535060079E427 /* GuideViewController.m in Sources */,
@@ -2297,7 +2310,6 @@
 				952269741BDDD0AD0040D769 /* NaviTestViewController.m in Sources */,
 				F4A7910C1BD69CDA00DE4219 /* HomeBannerModel.m in Sources */,
 				F4C8371A1BD529A70079E427 /* TAPageRealControl.m in Sources */,
-				F4C8374E1BD535060079E427 /* MyViewController.m in Sources */,
 				950060391BD0F04600489E3C /* UIImage+LoadImageFromWeb.m in Sources */,
 				F4C8372F1BD52AA30079E427 /* TAAnimatedDotView.m in Sources */,
 				9506A28F1BD75F8F00715B52 /* YunSearchTextField.m in Sources */,

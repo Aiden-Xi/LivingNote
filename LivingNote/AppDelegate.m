@@ -28,8 +28,11 @@
     UIViewController *cartVC = [kLivingNoteStoryBoard instantiateViewControllerWithIdentifier:@"CartViewController"];
     KKNavigationController *cartNC = [[KKNavigationController alloc] initWithRootViewController:cartVC];
     
-    UIViewController *myVC = [kLivingNoteStoryBoard instantiateViewControllerWithIdentifier:@"MyViewController"];
-    KKNavigationController *MyNc = [[KKNavigationController alloc] initWithRootViewController:myVC];
+    UIViewController *docterVC = [kLivingNoteStoryBoard instantiateViewControllerWithIdentifier:@"DocterMineViewController"];
+    KKNavigationController *docterNc = [[KKNavigationController alloc] initWithRootViewController:docterVC];
+    
+    UIViewController *sickVC = [kLivingNoteStoryBoard instantiateViewControllerWithIdentifier:@"SickMineViewController"];
+    KKNavigationController *sickNc = [[KKNavigationController alloc] initWithRootViewController:sickVC];
     
     UIViewController *aboutVC = [kLivingNoteStoryBoard instantiateViewControllerWithIdentifier:@"AboutViewController"];
     KKNavigationController *aboutNC = [[KKNavigationController alloc] initWithRootViewController:aboutVC];
@@ -43,11 +46,20 @@
     
     RDVTabBarController *rdv_TabBarController = [[RDVTabBarController alloc] init];
     
-    [rdv_TabBarController setViewControllers:@[homeNC, cartNC, MyNc, aboutNC]];
+    _user = [[UserModel alloc] init];
+    self.user.userType = 2;
     
+    if (self.user.userType == 1) {  // 游客  病人
+        [rdv_TabBarController setViewControllers:@[homeNC, cartNC, sickNc, aboutNC]];
+    }
+    
+    if(self.user.userType == 2) {
+        [rdv_TabBarController setViewControllers:@[homeNC, cartNC, docterNc, aboutNC]];
+    }
+
     RDVTabBar *tabBar = [rdv_TabBarController tabBar];
     
-    [tabBar setFrame:CGRectMake(CGRectGetMinX(tabBar.frame), CGRectGetMinY(tabBar.frame), CGRectGetWidth(tabBar.frame), 48)];
+    [tabBar setFrame:CGRectMake(CGRectGetMinX(tabBar.frame), CGRectGetMinY(tabBar.frame), CGRectGetWidth(tabBar.frame), 50)];
     
     NSInteger index = 0;
     
@@ -123,11 +135,15 @@
     // 测试
     self.isLogin = YES;
     
+    NSString *isFirstLogin = kNullToString([kUserDefaults objectForKey:@"firstLogin"]);
+    
     // 判断用户是否登录
     if (self.isLogin) {
         [self CreateControllers];
     } else {
-        [self CreateGuideControllers];
+        if ([isFirstLogin isEqualToString:@""]) {
+            [self CreateGuideControllers];
+        }
     }
     
     return YES;

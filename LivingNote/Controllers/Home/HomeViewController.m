@@ -197,7 +197,7 @@
     _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, kNavTabBarHeight, kScreenWidth, kScreenHeight - kNavTabBarHeight - 48)];
     _scrollView.backgroundColor = kLightGaryColor;
     _scrollView.delegate = self;
-    _scrollView.bounces = NO;
+//    _scrollView.bounces = NO;
     
     [self.view addSubview:_scrollView];
     
@@ -385,8 +385,7 @@
         }];
     }
     
-    _scrollView.contentSize = CGSizeMake(kScreenWidth, kScreenHeight * 4);
-    
+    _scrollView.contentSize = CGSizeMake(kScreenWidth, (_height + (kBgViewHeight + 2 *kDoubleSpace) * _testArray.count));
 }
 
 #pragma mark - Get Data - 

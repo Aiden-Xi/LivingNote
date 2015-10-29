@@ -15,6 +15,10 @@
  */
 @property (nonatomic, copy) NSString *phone;
 
+/// 用户地址
 @property (nonatomic, strong) NSMutableArray *addresses;
+
+/// 用户识别身份
+@property (nonatomic, assign) int userType;
 
 @end
