@@ -315,9 +315,9 @@
         
         // imageView
         UIImageView *imageView = [[UIImageView alloc] init];
-        imageView.backgroundColor = kRedColor;
+        imageView.backgroundColor = kClearColor;
         imageView.contentMode = UIViewContentModeCenter;
-        
+        		
         [bgView addSubview:imageView];
         
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
