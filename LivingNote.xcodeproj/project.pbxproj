@@ -37,6 +37,7 @@
 		9553BD031BE70A030055AA33 /* tab_personal_center_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9553BCF31BE70A030055AA33 /* tab_personal_center_selected@2x.png */; settings = {ASSET_TAGS = (); }; };
 		9553BD041BE70A030055AA33 /* tab_personal_center_unselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 9553BCF41BE70A030055AA33 /* tab_personal_center_unselected.png */; settings = {ASSET_TAGS = (); }; };
 		9553BD051BE70A030055AA33 /* tab_personal_center_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9553BCF51BE70A030055AA33 /* tab_personal_center_unselected@2x.png */; settings = {ASSET_TAGS = (); }; };
+		955517781BE8AA3E0067126F /* YunTimeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 955517771BE8AA3E0067126F /* YunTimeButton.m */; settings = {ASSET_TAGS = (); }; };
 		9572CDCD1BDF7961003FC93E /* LoginRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9572CDCC1BDF7961003FC93E /* LoginRegister.storyboard */; settings = {ASSET_TAGS = (); }; };
 		9572CDD31BDF798D003FC93E /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9572CDD21BDF798D003FC93E /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
 		9572CDD51BDF82C0003FC93E /* weinei_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9572CDD41BDF82C0003FC93E /* weinei_icon.jpg */; settings = {ASSET_TAGS = (); }; };
@@ -471,6 +472,8 @@
 		9553BCF31BE70A030055AA33 /* tab_personal_center_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_personal_center_selected@2x.png"; sourceTree = "<group>"; };
 		9553BCF41BE70A030055AA33 /* tab_personal_center_unselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tab_personal_center_unselected.png; sourceTree = "<group>"; };
 		9553BCF51BE70A030055AA33 /* tab_personal_center_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_personal_center_unselected@2x.png"; sourceTree = "<group>"; };
+		955517761BE8AA3E0067126F /* YunTimeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunTimeButton.h; sourceTree = "<group>"; };
+		955517771BE8AA3E0067126F /* YunTimeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunTimeButton.m; sourceTree = "<group>"; };
 		9572CDCC1BDF7961003FC93E /* LoginRegister.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginRegister.storyboard; sourceTree = "<group>"; };
 		9572CDCE1BDF7983003FC93E /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		9572CDCF1BDF7983003FC93E /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
@@ -1728,6 +1731,8 @@
 				F4C837551BD535B50079E427 /* YunShareView.m */,
 				95F12F371BD63629008A4ABC /* YunLineView.h */,
 				95F12F381BD63629008A4ABC /* YunLineView.m */,
+				955517761BE8AA3E0067126F /* YunTimeButton.h */,
+				955517771BE8AA3E0067126F /* YunTimeButton.m */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -2310,6 +2315,7 @@
 				952269741BDDD0AD0040D769 /* NaviTestViewController.m in Sources */,
 				F4A7910C1BD69CDA00DE4219 /* HomeBannerModel.m in Sources */,
 				F4C8371A1BD529A70079E427 /* TAPageRealControl.m in Sources */,
+				955517781BE8AA3E0067126F /* YunTimeButton.m in Sources */,
 				950060391BD0F04600489E3C /* UIImage+LoadImageFromWeb.m in Sources */,
 				F4C8372F1BD52AA30079E427 /* TAAnimatedDotView.m in Sources */,
 				9506A28F1BD75F8F00715B52 /* YunSearchTextField.m in Sources */,

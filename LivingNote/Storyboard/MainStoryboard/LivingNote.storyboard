@@ -66,31 +66,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rT7-OA-4JZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rT7-OA-4JZ" customClass="YunTimeButton">
                                 <rect key="frame" x="210" y="285" width="180" height="30"/>
+                                <color key="backgroundColor" red="0.9933170093" green="0.61265136139999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="qjH-z9-TWD"/>
                                     <constraint firstAttribute="height" constant="30" id="znt-Gb-xY3"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="jumpButtonClick:" destination="37h-SP-Knv" eventType="touchUpInside" id="jDd-8R-GAx"/>
+                                    <action selector="jumpButtonClick:" destination="37h-SP-Knv" eventType="touchUpInside" id="2w9-kX-Ov8"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.34743886932189683" green="0.61835224725974147" blue="0.74881628787878785" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="rT7-OA-4JZ" firstAttribute="centerX" secondItem="LIq-JA-eyb" secondAttribute="centerX" id="8AP-dV-iQU"/>
                             <constraint firstItem="rT7-OA-4JZ" firstAttribute="centerY" secondItem="LIq-JA-eyb" secondAttribute="centerY" id="TAB-Ey-xmf"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="jumpButton" destination="rT7-OA-4JZ" id="jpr-e6-sof"/>
+                        <outlet property="timeButton" destination="rT7-OA-4JZ" id="uGA-RP-psc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UIW-o1-ADE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2893" y="-1470"/>
+            <point key="canvasLocation" x="-2996" y="-1453"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="WId-Xl-bdh">

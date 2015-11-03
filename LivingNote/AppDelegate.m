@@ -83,7 +83,7 @@
                                             NSFontAttributeName: kSmallFont,
                                             NSForegroundColorAttributeName:COLOR(115, 115, 115, 1)
                                             }];
-        [item setTitlePositionAdjustment:UIOffsetMake(0, 1)];
+        [item setTitlePositionAdjustment:UIOffsetMake(0, 2.5)];
         
         index++;
     }

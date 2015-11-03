@@ -348,8 +348,8 @@
         [bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(bgView).offset(0);
             make.right.equalTo(bgView).offset(0);
-            make.bottom.equalTo(bgView).offset(-4.8 * kDoubleSpace);
-            make.height.mas_equalTo(1);
+            make.bottom.equalTo(bgView).offset(-4.9 * kDoubleSpace);
+            make.height.mas_equalTo(kLineHeight);
         }];
         
         // UIButton
@@ -383,7 +383,7 @@
         YunLabel *detailLabel = [[YunLabel alloc] init];
         detailLabel.text = @"查看详情";
         detailLabel.textColor = [UIColor lightGrayColor];
-        detailLabel.font = kBigFont;
+        detailLabel.font = kNormalFont;
         detailLabel.textAlignment = NSTextAlignmentRight;
         
         [bgView addSubview:detailLabel];
