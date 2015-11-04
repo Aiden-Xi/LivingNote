@@ -31,9 +31,24 @@
 
 @interface YunClenderView()
 
+/// 星期七天数组
 @property (nonatomic, strong) NSArray *weekArray;
-
+/// 本地时间日期
 @property (nonatomic, copy) NSString *timeString;
+/// 当前年
+@property (nonatomic, copy) NSString *year;
+/// 当前月
+@property (nonatomic, copy) NSString *month;
+/// 当前星期几
+@property (nonatomic, copy) NSString *weekDay;
+
+/// 本月一号对应星期几（前面需要的天数）
+@property (nonatomic, assign) NSInteger formDayCount;
+/// 本月最后一天对应的星期几（后面需要填补的天数）
+@property (nonatomic, assign) NSInteger houDayCount;
+
+
+
 
 @end
 
@@ -61,6 +76,36 @@
 - (void)createUI {
     // 根据日期的字符串判断日期的摆布
     self.backgroundColor = _backGroudColor ? _backGroudColor : kDefaultRedColor;
+    
+    _year = [[_timeString componentsSeparatedByString:@"-"] firstObject];
+    _month = [_timeString componentsSeparatedByString:@"-"][1];
+    _weekDay =  [self weekDayChinaChangeEnglish:[[_timeString componentsSeparatedByString:@"/"] lastObject]];
+    
+    
+    
+    
+}
+
+- (NSString *)weekDayChinaChangeEnglish:(NSString *)weekDay {
+    NSString *engWeekDay;
+    
+    if ([weekDay isEqualToString:@"星期一"]) {
+        engWeekDay = _weekArray[1];
+    } else if ([weekDay isEqualToString:@"星期二"]) {
+        engWeekDay = _weekArray[2];
+    }else if ([weekDay isEqualToString:@"星期三"]) {
+        engWeekDay = _weekArray[3];
+    }else if ([weekDay isEqualToString:@"星期四"]) {
+        engWeekDay = _weekArray[4];
+    }else if ([weekDay isEqualToString:@"星期五"]) {
+        engWeekDay = _weekArray[5];
+    }else if ([weekDay isEqualToString:@"星期六"]) {
+        engWeekDay = _weekArray[6];
+    } else {
+        engWeekDay = _weekArray[0];
+    }
+    
+    return engWeekDay;
 }
 
 - (void)setTitleColor:(UIColor *)titleColor {
