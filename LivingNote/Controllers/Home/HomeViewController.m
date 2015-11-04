@@ -72,6 +72,39 @@
     
     _testArray = [NSMutableArray array];
     
+    
+    NSMutableArray *p = [[NSMutableArray alloc] initWithObjects:@"S1",@"S14",@"S3",@"S4",@"S12",@"S6",@"S7",@"S8",@"S9",@"S10",@"S11",@"S5",@"S13",@"S2",nil];
+    
+    [p sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        NSString *a = (NSString *)obj1;
+        NSString *b = (NSString *)obj2;
+        
+        int aNum = [[a substringFromIndex:1] intValue];
+        int bNum = [[b substringFromIndex:1] intValue];
+        
+        if (aNum > bNum) {
+            return NSOrderedAscending;
+        }
+        else if (aNum < bNum){
+            return NSOrderedDescending;
+        }
+        else {
+            return NSOrderedSame;
+        }
+    }];
+    
+    NSLog(@"p %@", p);
+    
+    NSArray *array = [NSArray arrayWithObjects:@"2", @"3", @"1", @"4", nil];
+
+    // 返回一个排好序的数组，原来数组的元素顺序不会改变
+    
+    // 指定元素的比较方法：compare:
+    
+    NSArray *array2 = [array sortedArrayUsingSelector:@selector(compare:)];
+    
+    NSLog(@"array2:%@", array2);
+    
     for (int i = 0; i < 4; i++) {
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         
