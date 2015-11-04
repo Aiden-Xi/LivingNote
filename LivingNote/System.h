@@ -149,6 +149,7 @@
 #define kBlueColor                          [UIColor blueColor]
 #define kClearColor                         [UIColor clearColor]
 #define kLightWhiteColor                    COLOR(250, 250, 250, 0.5)
+#define kDefaultRedColor                    COLOR(216, 72, 89, 1)
 
 #pragma mark - API URL -Oshoplis
 

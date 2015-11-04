@@ -18,6 +18,7 @@
 #define kBottomButtonTag 1000
 
 #define kBgViewHeight (kScreenWidth > 375 ? 232 * 1.293 : (kScreenWidth > 320 ? 232 * 1.17 : 232))
+#define kRightSpace (kScreenWidth > 375 ? 232 * 1.293 : (kScreenWidth > 320 ? 232 * 1.17 : 232))
 
 @interface HomeViewController () <SDCycleScrollViewDelegate, YunSearchTextFieldDelegate, UITextFieldDelegate, UIScrollViewDelegate, YunButtonViewDelegate>
 
@@ -71,7 +72,6 @@
     _bannerArray = [NSMutableArray array];
     
     _testArray = [NSMutableArray array];
-    
     
     NSMutableArray *p = [[NSMutableArray alloc] initWithObjects:@"S1",@"S14",@"S3",@"S4",@"S12",@"S6",@"S7",@"S8",@"S9",@"S10",@"S11",@"S5",@"S13",@"S2",nil];
     
@@ -347,9 +347,9 @@
         
         // imageView
         UIImageView *imageView = [[UIImageView alloc] init];
-        imageView.backgroundColor = kRedColor;
+        imageView.backgroundColor = kClearColor;
         imageView.contentMode = UIViewContentModeCenter;
-        
+        		
         [bgView addSubview:imageView];
         
         [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -380,20 +380,15 @@
         [bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(bgView).offset(0);
             make.right.equalTo(bgView).offset(0);
-            make.bottom.equalTo(bgView).offset(-4.8 * kDoubleSpace);
-            make.height.mas_equalTo(1);
+            make.bottom.equalTo(bgView).offset(-4.9 * kDoubleSpace);
+            make.height.mas_equalTo(kLineHeight);
         }];
         
         // UIButton
         YunButton *button = [[YunButton alloc] init];
-        [button setTitle:@"查看详情" forState:UIControlStateNormal];
-        button.titleLabel.font = kBigFont;
         button.backgroundColor = kClearColor;
-        [button setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
         button.tag = ( i + 1) * kBottomButtonTag;
         [button addTarget:self action:@selector(enterDetail:) forControlEvents:UIControlEventTouchUpInside];
-        button.titleLabel.textAlignment = NSTextAlignmentCenter;
-        button.titleEdgeInsets = UIEdgeInsetsMake(0, 200, 0, 0);
         
         [bgView addSubview:button];
         
@@ -403,7 +398,7 @@
             make.top.mas_equalTo(imageView.mas_bottom).offset(0);
             make.bottom.equalTo(bgView).offset(0);
         }];
-        
+    
         // 箭头
         UIImageView *arrowView = [[UIImageView alloc] init];
         arrowView.image = [UIImage imageNamed:@"back_button"];
@@ -415,6 +410,21 @@
             make.top.mas_equalTo(button.mas_top).offset(1.3 * kDoubleSpace);
             make.width.and.height.mas_equalTo(25);
             make.right.equalTo(bgView).offset(-1 * kDoubleSpace);
+        }];
+        
+        YunLabel *detailLabel = [[YunLabel alloc] init];
+        detailLabel.text = @"查看详情";
+        detailLabel.textColor = [UIColor lightGrayColor];
+        detailLabel.font = kNormalFont;
+        detailLabel.textAlignment = NSTextAlignmentRight;
+        
+        [bgView addSubview:detailLabel];
+        
+        [detailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(bgView).offset(0);
+            make.right.mas_equalTo(arrowView.mas_left).offset(0);
+            make.top.mas_equalTo(imageView.mas_bottom).offset(0);
+            make.bottom.equalTo(bgView).offset(0);
         }];
     }
     

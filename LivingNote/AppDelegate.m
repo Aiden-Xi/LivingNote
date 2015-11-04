@@ -40,7 +40,8 @@
     UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_background"];
     UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_background"];
     
-    NSArray *tabBarItemImages = @[@"index_tab", @"cart_tab", @"my_tab", @"about_tab"];
+    NSArray *tabBarItemImages = @[@"tab_home_selected", @"tab_my_group_selected", @"tab_personal_center_selected", @"tab_contactUs_selected"];
+    NSArray *tabBarItemUnImages = @[@"tab_home_unselected", @"tab_my_group_unselected", @"tab_personal_center_unselected", @"tab_contactUs_unselected"];
     
     NSArray *tabBarItemTitles = @[@"主页", @"我的圈子", @"个人中心", @"联系我们"];
     
@@ -66,10 +67,8 @@
     for (RDVTabBarItem *item in [[rdv_TabBarController tabBar] items]) {
         [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
         
-        UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_select",
-                                                      [tabBarItemImages objectAtIndex:index]]];
-        UIImage *unselectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@",
-                                                        [tabBarItemImages objectAtIndex:index]]];
+        UIImage *selectedimage = [UIImage imageNamed:[tabBarItemImages objectAtIndex:index]];
+        UIImage *unselectedimage = [UIImage imageNamed:[tabBarItemUnImages objectAtIndex:index]];
         
         [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
         
@@ -77,14 +76,14 @@
         
         [item setSelectedTitleAttributes:@{
                                           NSFontAttributeName: kSmallFont,
-                                          NSForegroundColorAttributeName: kOrangeColor
+                                          NSForegroundColorAttributeName:COLOR(214, 110, 126, 1)
                                           }];
         
         [item setUnselectedTitleAttributes:@{
                                             NSFontAttributeName: kSmallFont,
-                                            NSForegroundColorAttributeName: kGaryColor
+                                            NSForegroundColorAttributeName:COLOR(115, 115, 115, 1)
                                             }];
-        [item setTitlePositionAdjustment:UIOffsetMake(0, 1)];
+        [item setTitlePositionAdjustment:UIOffsetMake(0, 2.5)];
         
         index++;
     }

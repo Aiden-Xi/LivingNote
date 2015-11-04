@@ -72,7 +72,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxE-pE-KbX" customClass="YunButton">
                                 <rect key="frame" x="30" y="490" width="550" height="48"/>
-                                <color key="backgroundColor" red="0.83529411764705885" green="0.19215686274509802" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.28235294117647058" blue="0.27843137254901962" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Cwb-87-1s0"/>
                                 </constraints>
@@ -151,7 +151,41 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7T-Zs-rdB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-636" y="250"/>
+            <point key="canvasLocation" x="-1344" y="289"/>
+        </scene>
+        <!--Calender View Controller-->
+        <scene sceneID="nVO-Np-QdC">
+            <objects>
+                <viewController storyboardIdentifier="CalenderViewController" id="fZ4-RK-Ugb" customClass="CalenderViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yes-Eq-6aZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="23e-FU-pvK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ha6-lI-hVZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBj-uv-iX6">
+                                <rect key="frame" x="203" y="37" width="195" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="3uH-R8-AlG"/>
+                                    <constraint firstAttribute="width" constant="195" id="bKw-C4-3lM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eBj-uv-iX6" firstAttribute="top" secondItem="yes-Eq-6aZ" secondAttribute="bottom" constant="17" id="Jrc-rs-sh7"/>
+                            <constraint firstItem="eBj-uv-iX6" firstAttribute="centerX" secondItem="ha6-lI-hVZ" secondAttribute="centerX" id="OPF-Sh-ALm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oTd-pk-mfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-438" y="271"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="mLh-ew-LWH">
@@ -364,7 +398,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKM-qX-RH7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-552" y="238"/>
+            <point key="canvasLocation" x="-1374" y="365"/>
         </scene>
         <!--Sick Person Certify View Controller-->
         <scene sceneID="Nuq-HL-AgS">
@@ -398,7 +432,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4eA-Gh-Lhv" customClass="YunButton">
                                 <rect key="frame" x="28" y="485" width="545" height="55"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.19215686269999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.28235294117647058" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="gOA-xg-16I"/>
                                     <constraint firstAttribute="height" constant="55" id="yrC-5O-pws"/>
@@ -694,7 +728,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9f-xy-Yn9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-552" y="250"/>
+            <point key="canvasLocation" x="-1344" y="339"/>
         </scene>
         <!--Login Choose View Controller-->
         <scene sceneID="OJV-mJ-Q4Q">
@@ -730,7 +764,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.19215686274509802" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.28235294117647058" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="BHV-6A-yPb" firstAttribute="centerX" secondItem="gac-oX-ay5" secondAttribute="centerX" id="CIE-RD-gdc"/>
                                     <constraint firstItem="KH5-cg-4I2" firstAttribute="leading" secondItem="gac-oX-ay5" secondAttribute="leading" constant="25" id="Mti-wH-vKs"/>
@@ -740,7 +774,7 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhH-Mj-8rq" customClass="YunButton">
                                 <rect key="frame" x="50" y="480" width="500" height="55"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.19215686274509802" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.28235294117647058" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="我是医生">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -802,7 +836,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xm7-j3-Dnb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-690" y="432"/>
+            <point key="canvasLocation" x="-1374" y="350"/>
         </scene>
         <!--Doctor Certify View Controller-->
         <scene sceneID="pqS-dL-ZhR">
@@ -828,7 +862,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSc-BP-2zc" customClass="YunButton">
                                 <rect key="frame" x="28" y="485" width="545" height="55"/>
-                                <color key="backgroundColor" red="0.80000000000000004" green="0.19215686269999999" blue="0.28235294119999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.84705882352941175" green="0.28235294117647058" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="UKm-sY-SxS"/>
                                     <constraint firstAttribute="height" constant="55" id="zHp-8v-wt2"/>
@@ -1260,7 +1294,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9x-Yu-HD4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1051" y="183"/>
+            <point key="canvasLocation" x="-1363" y="334"/>
         </scene>
     </scenes>
     <resources>
