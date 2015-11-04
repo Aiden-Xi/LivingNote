@@ -41,6 +41,8 @@
 		9572CDCD1BDF7961003FC93E /* LoginRegister.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9572CDCC1BDF7961003FC93E /* LoginRegister.storyboard */; settings = {ASSET_TAGS = (); }; };
 		9572CDD31BDF798D003FC93E /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9572CDD21BDF798D003FC93E /* RegisterViewController.m */; settings = {ASSET_TAGS = (); }; };
 		9572CDD51BDF82C0003FC93E /* weinei_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9572CDD41BDF82C0003FC93E /* weinei_icon.jpg */; settings = {ASSET_TAGS = (); }; };
+		9587250B1BE9F31D0021E2E1 /* CalenderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9587250A1BE9F31D0021E2E1 /* CalenderViewController.m */; settings = {ASSET_TAGS = (); }; };
+		9587250E1BE9F40A0021E2E1 /* YunClenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9587250D1BE9F40A0021E2E1 /* YunClenderView.m */; settings = {ASSET_TAGS = (); }; };
 		959E7E6E1BD0DC020000AF8D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 959E7E6D1BD0DC020000AF8D /* main.m */; };
 		959E7E711BD0DC020000AF8D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 959E7E701BD0DC020000AF8D /* AppDelegate.m */; };
 		959E7E7A1BD0DC020000AF8D /* LivingNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 959E7E781BD0DC020000AF8D /* LivingNote.xcdatamodeld */; };
@@ -480,6 +482,10 @@
 		9572CDD11BDF798D003FC93E /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		9572CDD21BDF798D003FC93E /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		9572CDD41BDF82C0003FC93E /* weinei_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = weinei_icon.jpg; sourceTree = "<group>"; };
+		958725091BE9F31D0021E2E1 /* CalenderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalenderViewController.h; sourceTree = "<group>"; };
+		9587250A1BE9F31D0021E2E1 /* CalenderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalenderViewController.m; sourceTree = "<group>"; };
+		9587250C1BE9F40A0021E2E1 /* YunClenderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YunClenderView.h; sourceTree = "<group>"; };
+		9587250D1BE9F40A0021E2E1 /* YunClenderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YunClenderView.m; sourceTree = "<group>"; };
 		959E7E691BD0DC020000AF8D /* LivingNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivingNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959E7E6D1BD0DC020000AF8D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		959E7E6F1BD0DC020000AF8D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1683,6 +1689,8 @@
 			children = (
 				F4C837401BD535060079E427 /* CartViewController.h */,
 				F4C837411BD535060079E427 /* CartViewController.m */,
+				958725091BE9F31D0021E2E1 /* CalenderViewController.h */,
+				9587250A1BE9F31D0021E2E1 /* CalenderViewController.m */,
 			);
 			name = MineCircle;
 			path = Cart;
@@ -1733,6 +1741,8 @@
 				95F12F381BD63629008A4ABC /* YunLineView.m */,
 				955517761BE8AA3E0067126F /* YunTimeButton.h */,
 				955517771BE8AA3E0067126F /* YunTimeButton.m */,
+				9587250C1BE9F40A0021E2E1 /* YunClenderView.h */,
+				9587250D1BE9F40A0021E2E1 /* YunClenderView.m */,
 			);
 			path = BaseView;
 			sourceTree = "<group>";
@@ -2271,12 +2281,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4C8372D1BD52AA30079E427 /* NSData+SDDataCache.m in Sources */,
+				9587250E1BE9F40A0021E2E1 /* YunClenderView.m in Sources */,
 				F4C837301BD52AA30079E427 /* TADotView.m in Sources */,
 				F4C8372E1BD52AA30079E427 /* TAAbstractDotView.m in Sources */,
 				950060431BD0F30A00489E3C /* UIView+AddBadge.m in Sources */,
 				950060371BD0F04600489E3C /* NSObject+NullToString.m in Sources */,
 				F4B8919C1BD153FD00FB35DA /* KLCPopup.m in Sources */,
 				F489B5C71BDFA42800923AD6 /* SickPersonCertifyViewController.m in Sources */,
+				9587250B1BE9F31D0021E2E1 /* CalenderViewController.m in Sources */,
 				95D6EC711BD6180500AF8B70 /* PCChartViewController.m in Sources */,
 				F489B5C41BDFA3CD00923AD6 /* LoginChooseViewController.m in Sources */,
 				9572CDD31BDF798D003FC93E /* RegisterViewController.m in Sources */,
