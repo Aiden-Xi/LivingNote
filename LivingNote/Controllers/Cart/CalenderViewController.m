@@ -33,8 +33,9 @@
     _clenderView.titleFont = kNormalFont;
     _clenderView.titleColor = kWhiteColor;
     _clenderView.delegate = self;
-   
+    
     [self.view addSubview:_clenderView];
+    
     
 }
 
@@ -42,10 +43,10 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - YunClenderViewDelegate - 
+#pragma mark - YunClenderViewDelegate -
 
 - (void)updateMonth:(NSString *)timeString {
-
+    
 }
 
 - (void)dayButtonClick:(YunButton *)sender {

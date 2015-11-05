@@ -43,6 +43,8 @@
  */
 - (instancetype)initWithFrame:(CGRect)frame;
 
+- (void)clumWeekDay:(NSInteger)year month:(NSInteger)month;
+
 @property (nonatomic, assign) id <YunClenderViewDelegate> delegate;
 
 @end
