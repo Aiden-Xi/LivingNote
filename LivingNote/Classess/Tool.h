@@ -29,6 +29,13 @@
                        requestURL:(NSString *)requestURL
                            params:(NSDictionary *)params;
 
+// 计算文本框高度
++(CGFloat)calculateContentLabelHeight:(NSString *)text withFont:(UIFont *)font withWidth:(CGFloat)width;
+
+// 计算文本高度
++ (int)detailLabelHeight:(NSString *)str wordLength:(int)length linePadding:(int)padding fontSize:(int)size;
++ (int)textLines:(NSString *)str lineWidth:(int)width fontSize:(int)size;
+
 /**
  *  设置UserDefault standardUserDefault
  *

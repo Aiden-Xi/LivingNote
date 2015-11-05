@@ -101,6 +101,8 @@
 #define kScreenHeight                       ([[UIScreen mainScreen] bounds].size.height)
 #define kScreenSize                         CGSizeMake(kScreenWidth, kScreenHeight)
 #define kLineHeight                         (1 / [UIScreen mainScreen].scale)
+#define KProportionForWidth                  kScreenWidth/375
+#define KProportionForHeight                 kScreenHeight/667
 
 #define kLetterFamily                       @"HelveticaNeue"
 #define kFontFamily                         @"HelveticaNeue"
@@ -135,7 +137,7 @@
 #define COLOR(r, g, b, a)                   [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:(a * 1.0)]
 
 #define ColorFromRGB(rgbValue)              [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
-
+#define ColorWithAlphaFromRGB(rgbValue,a)              [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:a];
 
 #pragma mark - Color -
 
@@ -150,6 +152,8 @@
 #define kClearColor                         [UIColor clearColor]
 #define kLightWhiteColor                    COLOR(250, 250, 250, 0.5)
 #define kDefaultRedColor                    COLOR(216, 72, 89, 1)
+#define kNaviTitleColor                     ColorWithAlphaFromRGB(0x1d1d26, 0.85)
+#define kGrayFontColor                      ColorWithAlphaFromRGB(0x282828,0.5)
 
 #pragma mark - API URL -Oshoplis
 

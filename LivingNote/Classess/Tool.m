@@ -14,6 +14,66 @@
 
 #pragma mark - URL Builder
 
+#pragma mark 计算UILabel的高度
++(CGFloat)calculateContentLabelHeight:(NSString *)text withFont:(UIFont *)font withWidth:(CGFloat)width{
+    CGSize commentSize;
+    commentSize = [text boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:        NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin |NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName:font} context:nil].size;
+    return commentSize.height;
+}
+
+#pragma mark - Detail Label -
+
++ (int)detailLabelHeight:(NSString *)str wordLength:(int)length linePadding:(int)padding fontSize:(int)size
+{
+    int detailLabelHeight;
+    
+    int detailLines = [self getToInt:str];
+    
+    if (detailLines % length == 0) {
+        detailLabelHeight = (int)(detailLines / length) * (size + padding);
+    } else {
+        detailLabelHeight = (detailLines / length + 1) * (size + padding);
+    }
+    
+    XXYLog(@"str = %@\nword length = %d\nline padding = %d\nfont size = %d\ndetailLabelHeight = %d\n", str, length, padding, size, detailLabelHeight);
+    
+    return detailLabelHeight;
+}
+
++ (int)textLines:(NSString *)str lineWidth:(int)width fontSize:(int)size;
+{
+    XXYLog(@"str = %@", str);
+    
+    int wordLength = width / size;
+    
+    int lines = [self getToInt:str] / wordLength;
+    
+    if ([self getToInt:str] % wordLength != 0) {
+        lines += 1;
+    }
+    
+    return lines;
+}
+
+#pragma mark - String Length -
+
++ (int)getToInt:(NSString*)strtemp
+{
+    NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    NSData* da = [strtemp dataUsingEncoding:enc];
+    
+    int length = (int)[da length];
+    
+    if (length % 2 == 0) {
+        length /= 2;
+    } else {
+        length = length / 2 + 1;
+    }
+    
+    return length;
+}
+
+
 + (NSString *)buildRequestURLHost:(NSString *)host
                        APIVersion:(NSString *)APIVersion
                        requestURL:(NSString *)requestURL
