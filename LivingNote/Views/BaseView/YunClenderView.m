@@ -63,10 +63,14 @@
         
         //获得系统时间
         NSDate *senddate=[NSDate date];
+        NSLog(@"senddate = %@", senddate);
         NSDateFormatter  *dateformatter=[[NSDateFormatter alloc] init];
         dateformatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
         [dateformatter setDateFormat:@"YYYY-MM-dd HH:mm:ss MMMM/dd/EEEE"];
         _timeString = [dateformatter stringFromDate:senddate];
+        
+        senddate = [dateformatter dateFromString:@""];
+        
         NSLog(@"now time string : %@", _timeString);
         
         _year = [[[_timeString componentsSeparatedByString:@"-"] firstObject] integerValue];

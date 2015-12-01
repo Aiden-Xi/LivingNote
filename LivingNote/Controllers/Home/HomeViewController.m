@@ -133,6 +133,13 @@
 
 - (void)createTopUI {
     
+    
+//    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+//    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+//    NSDate *date = [dateFormatter dateFromString:@""];
+//    
+//    NSLog(@"%@", date);
+    
 //    _searchTextField = [[YunSearchTextField alloc] init];
 //    _searchTextField.searchDelegate = self;
 //    _searchTextField.delegate = self;

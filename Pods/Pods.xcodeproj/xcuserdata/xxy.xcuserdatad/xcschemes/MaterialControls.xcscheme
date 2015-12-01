@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7CCCA096C87535030F20153B"
+               BlueprintIdentifier = "3DC0ACE03E7B12FB98F53CFB"
                BuildableName = "libMaterialControls.a"
                BlueprintName = "MaterialControls"
                ReferencedContainer = "container:Pods.xcodeproj">

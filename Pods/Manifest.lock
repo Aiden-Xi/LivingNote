@@ -20,6 +20,9 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - AsyncDisplayKit (1.2.3):
+    - AsyncDisplayKit/ASDealloc2MainObject (= 1.2.3)
+  - AsyncDisplayKit/ASDealloc2MainObject (1.2.3)
   - BBBadgeBarButtonItem (1.1)
   - IQKeyboardManager (3.3.0)
   - Masonry (0.6.2)
@@ -47,6 +50,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - AsyncDisplayKit
   - BBBadgeBarButtonItem
   - IQKeyboardManager
   - Masonry
@@ -63,6 +67,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  AsyncDisplayKit: 5c8f38225f7478e39c48196cec0dd0d2ac3455ed
   BBBadgeBarButtonItem: 958744e7c429e467b14af983040dbaae105b3355
   IQKeyboardManager: c87b6600cbfca89d1fe6e8052d936e6c20f65375
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
